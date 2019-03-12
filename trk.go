@@ -2,14 +2,14 @@ package gpx
 
 // Trk represents a track - an ordered list of points describing a path.
 type Trk struct {
-	Name   string    `xml:"name"`
-	Cmt    string    `xml:"cmt"`
-	Desc   string    `xml:"desc"`
-	Src    string    `xml:"src"`
-	Link   []*Link   `xml:"link"`
-	Number uint      `xml:"number"`
-	Type   string    `xml:"type"`
-	Trkseg []*Trkseg `xml:"trkseg"`
+	Name   string    `xml:"name,omitempty"`
+	Cmt    string    `xml:"cmt,omitempty"`
+	Desc   string    `xml:"desc,omitempty"`
+	Src    string    `xml:"src,omitempty"`
+	Link   []*Link   `xml:"link,omitempty"`
+	Number uint      `xml:"number,omitempty"`
+	Type   string    `xml:"type,omitempty"`
+	Trkseg []*Trkseg `xml:"trkseg,omitempty"`
 }
 
 // Trkseg holds a list of Track Points which are logically connected in order.

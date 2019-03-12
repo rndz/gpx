@@ -9,24 +9,24 @@ import (
 type Wpt struct {
 	Lat          float64   `xml:"lat,attr"`
 	Lon          float64   `xml:"lon,attr"`
-	Ele          Elevation `xml:"ele"`
-	Time         time.Time `xml:"time"`
-	Magvar       float64   `xml:"magvar"`
-	GeoIDHeight  float64   `xml:"geoidheight"`
-	Name         string    `xml:"name"`
-	Cmt          string    `xml:"cmt"`
-	Desc         string    `xml:"desc"`
-	Src          string    `xml:"src"`
-	Link         []*Link   `xml:"link"`
-	Sym          string    `xml:"sym"`
-	Type         string    `xml:"type"`
-	Fix          string    `xml:"fix"` // http://www.topografix.com/gpx/1/1/#type_fixType
-	Sat          uint      `xml:"sat"`
-	Hdop         float64   `xml:"hdop"`
-	Vdop         float64   `xml:"vdop"`
-	Pdop         float64   `xml:"pdop"`
-	AgeOfGPSData float64   `xml:"ageofgpsdata"`
-	DGPSID       uint      `xml:"dgpsid"`
+	Ele          Elevation `xml:"ele,omitempty"`
+	Time         time.Time `xml:"time,omitempty"`
+	Magvar       float64   `xml:"magvar,omitempty"`
+	GeoIDHeight  float64   `xml:"geoidheight,omitempty"`
+	Name         string    `xml:"name,omitempty"`
+	Cmt          string    `xml:"cmt,omitempty"`
+	Desc         string    `xml:"desc,omitempty"`
+	Src          string    `xml:"src,omitempty"`
+	Link         []*Link   `xml:"link,omitempty"`
+	Sym          string    `xml:"sym,omitempty"`
+	Type         string    `xml:"type,omitempty"`
+	Fix          string    `xml:"fix,omitempty"` // http://www.topografix.com/gpx/1/1/#type_fixType
+	Sat          uint      `xml:"sat,omitempty"`
+	Hdop         float64   `xml:"hdop,omitempty"`
+	Vdop         float64   `xml:"vdop,omitempty"`
+	Pdop         float64   `xml:"pdop,omitempty"`
+	AgeOfGPSData float64   `xml:"ageofgpsdata,omitempty"`
+	DGPSID       uint      `xml:"dgpsid,omitempty"`
 }
 
 type Elevation struct {
